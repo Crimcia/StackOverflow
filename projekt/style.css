@@ -39,3 +39,81 @@ nav{
 .sign-in:hover{
     background-color: rgb(41, 109, 236);
 }
+main{
+    display: flex;
+    justify-content: space-between;
+    
+}
+section{
+    width: 50%;
+}
+.left, .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.left > div{
+    margin-left: 250px;
+}
+.right > div{
+    margin-right: 250px;
+}
+.main-elements{
+    border: black solid 2px;
+    border-radius: 10px;
+    height: 550px;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    transition: all 0.5s;
+}
+.main-elements:hover{
+    height: 570px;
+    width: 58%;
+}
+.main-elements > a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.main-elements p{
+    font-size: 13px;
+}
+footer{
+    background-color: black;
+    font-size: 13px;
+}
+footer a, footer p{
+    text-decoration: none;
+    color: rgb(160, 159, 159);
+    &:hover{
+        color: white;
+    }
+}
+.footer-nav-main{
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+.footer-side-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-side-logo{
+    height: 70px;
+}
+.footer-cont{
+    padding: 70px 200px;
+}
+.footer-side-nav > div{
+    display: flex;
+    flex-direction: column;
+}
+.header-desc{
+    text-align: center;
+    font-size: 50px;
+}

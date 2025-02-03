@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="img/stack-logo.png" type="image/x-icon">
     <title>Stack Overflow login page</title>
 </head>
 <body>
     <nav>
         <div class="logo-nav-cont">
             <a href="index.php" class="logo-nav">
-                <img src="img/logo.png" alt="logo" width=25 height=25>
+                <img src="img/stack-logo.png" alt="logo" width=25 height=25>
                 <h1>Stack Overflow</h1>
             </a>
         </div>
@@ -29,7 +30,9 @@
             <label for="password-inp">Password:</label>
             <input type="text" id="password-inp">
             <br>
+            <br>
             <button>Log in</button>
+            <p>Already have an account? <a href="sign-in.php">Sign in</a></p>
         </form>
     </main>
 </body>

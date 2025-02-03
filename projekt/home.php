@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Stack Overflow</title>
+    <link rel="shortcut icon" href="img/stack-logo.png" type="image/x-icon">
+    <title>Home</title>
 </head>
 <body>
     <nav>
         <div class="logo-nav-cont">
             <a href="index.php" class="logo-nav">
-                <img src="img/logo.png" alt="logo" width=25 height=25>
+                <img src="img/stack-logo.png" alt="logo" width=50 height=50>
                 <h1>Stack Overflow</h1>
             </a>
         </div>
@@ -20,27 +21,5 @@
             <a href="sign-in.php" class='login-nav sign-in'>Sign in</a>
         </div>
     </nav>
-    <header>
-        <h1>Stack Overflow</h1>
-        <div>A place for all developers</div>
-    </header>
-    <main>
-        <section class='home-sect'>
-            
-        </section>
-        <section class='questions-sect'>
-
-        </section>
-        <section class='tags-sect'>
-            
-        </section>
-        <section class='users-sect'>
-            
-        </section>
-        <section class='questions-sect'>
-            
-        </section>
-    </main>
-    <script src="app.js"></script>
 </body>
 </html>
