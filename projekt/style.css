@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: Roboto;
+    margin: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px gray;
+}
+.logo-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+}
+.logo-nav:hover{
+    background-color: rgb(215, 212, 212);
+}
+.login-nav{
+    border: solid 1px cornflowerblue;
+    border-radius: 5px;
+    padding: 7px;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+.sign-in{
+    background-color: cornflowerblue;
+    color: white
+}
+.login-nav:hover{
+    background-color: rgb(227, 227, 227);
+}
+.sign-in:hover{
+    background-color: rgb(41, 109, 236);
+}
