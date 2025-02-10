@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: Roboto;
+    margin: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px gray;
+}
+.logo-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+}
+.logo-nav:hover{
+    background-color: rgb(215, 212, 212);
+}
+.login-nav{
+    border: solid 1px cornflowerblue;
+    border-radius: 5px;
+    padding: 7px;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+.sign-in{
+    background-color: cornflowerblue;
+    color: white
+}
+.login-nav:hover{
+    background-color: rgb(227, 227, 227);
+}
+.sign-in:hover{
+    background-color: rgb(41, 109, 236);
+}
+header{
+    border-left: solid gray 1px;
+    border-right: solid gray 1px;
+    padding: 15px;
+}
+.header-top{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-cont{
+    display: flex;
+    height: 125px;
+    border: solid 1px gray;
+}
+.post-side-bar{
+    width: 10%;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 14px;
+    color: gray;
+}
+.post-main-bar{
+    margin-top: 25px;
+    width: 90%;
+    margin-left: 15px;
+}
+.post-title{
+    border: none;
+    color:cornflowerblue;
+    background-color: white;
+    font-size: 18px;
+}
+.body-text{
+    font-size: 14px;
+}
+aside{
+    width: 25%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+aside a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    &:hover{
+        background-color:rgb(240, 240, 240);
+    }
+}
+main{
+    width: 75%;
+    float: left;
+}
+footer{
+    background-color: black;
+    font-size: 13px;
+    clear: both;
+}
+footer a, footer p{
+    text-decoration: none;
+    color: rgb(160, 159, 159);
+    &:hover{
+        color: white;
+    }
+}
+.footer-nav-main{
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+.footer-side-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-side-logo{
+    height: 70px;
+}
+.footer-cont{
+    padding: 70px 200px;
+}
+.footer-side-nav > div{
+    display: flex;
+    flex-direction: column;
+}
+.header-desc{
+    text-align: center;
+    font-size: 50px;
+}
