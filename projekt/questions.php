@@ -2,7 +2,7 @@
     function createSidePostBar($row){
         echo "<div class='post-side-bar'>";
         echo "<p>$row[votes] votes</p>";
-        echo "<p>$row[amount_of_answers] answers</p>";
+        echo "<p>$row[answers] answers</p>";
         echo "<p>$row[views] views</p>";
         echo "</div>";
     }
@@ -10,7 +10,7 @@
     function createMainPostBar($row){
         echo "<div class='post-main-bar'>";
         echo "<button class='post-title'>$row[title]</button><br>";
-        echo "<p class='body-text'>$row[body_text]Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, blanditiis. Error quisquam non labore sint reiciendis, voluptas qui soluta aspernatur ducimus, pariatur cumque sapiente. Earum aspernatur obcaecati cumque laudantium facere?
+        echo "<p class='body-text'>$row[description]Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis voluptas, qui consequuntur minus labore. Nostrum ex quae totam odio atque neque! Cum, maxime! Ipsum enim eos cum quas consequatur!Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis voluptas, qui consequuntur minus labore. Nostrum ex quae totam odio atque neque! Cum, maxime! Ipsum enim eos cum quas consequatur!Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis voluptas, qui consequuntur minus labore. Nostrum ex quae totam odio atque neque! Cum, maxime! Ipsum enim eos cum quas consequatur!Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis voluptas, qui consequuntur minus labore. Nostrum ex quae totam odio atque neque! Cum, maxime! Ipsum enim eos cum quas consequatur!Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis voluptas, qui consequuntur minus labore. Nostrum ex quae totam odio atque neque! Cum, maxime! Ipsum enim eos cum quas consequatur!Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis voluptas, qui consequuntur minus labore. Nostrum ex quae totam odio atque neque! Cum, maxime! Ipsum enim eos cum quas consequatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, blanditiis. Error quisquam non labore sint reiciendis, voluptas qui soluta aspernatur ducimus, pariatur cumque sapiente. Earum aspernatur obcaecati cumque laudantium facere?
         </p>";
         echo "</div>";
     }
@@ -53,7 +53,7 @@
             <div class="header-bottom">
                 <p>
                     <?php
-                        $con = mysqli_connect("localhost", "root", "", "stack_overflow");
+                        $con = mysqli_connect("localhost", "root", "", "stackoverflow");
                         $count_query = "SELECT COUNT(id) FROM posts;";
                         $result_count = mysqli_query($con, $count_query);
                         $row = mysqli_fetch_array($result_count);
@@ -71,7 +71,6 @@
                 echo "<div class='post-cont'>";
                 while($row = mysqli_fetch_array($result1)){
                     createSidePostBar($row);
-
                     createMainPostBar($row);
                 }
                 echo "</div>";
@@ -132,5 +131,8 @@
             </div>
         </div>
     </footer>
+    <script>
+        
+    </script>
 </body>
 </html>
