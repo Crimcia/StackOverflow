@@ -1,3 +1,8 @@
+<!-- <?php
+    // function setLoginCookie($username){
+    //     setcookie("user", $username, time() + 3600, "/");
+    // }
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +27,7 @@
         </div>
     </nav>
     <main>
-        <form action="">
+        <form action="" method="post">
             <h1>Log into Stack Overflow</h1>
             <label for="name-inp">Username:</label>
             <input type="text" id="name-inp">
@@ -34,6 +39,13 @@
             <button>Log in</button>
             <p>Already have an account? <a href="sign-in.php">Sign in</a></p>
         </form>
+        <!-- <?php
+            // if($_SERVER["REQUEST_METHOD"] == "POST"){
+            //     $username = $_POST["name-inp"];
+            //     $password = $_POST["password-inp"];
+            //     setLoginCookie($username);
+            // }
+        ?> -->
     </main>
 </body>
 </html>

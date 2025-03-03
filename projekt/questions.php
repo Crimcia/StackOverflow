@@ -66,14 +66,16 @@
         <section class="questions">
 
             <?php
-                $query1 = "SELECT * FROM posts;";
+                $query1 = "SELECT * FROM posts ORDER BY id DESC;";
                 $result1 = mysqli_query($con, $query1);
-                echo "<div class='post-cont'>";
+
                 while($row = mysqli_fetch_array($result1)){
+                    echo "<div class='post-cont'>";
                     createSidePostBar($row);
                     createMainPostBar($row);
+                    echo "</div>";
                 }
-                echo "</div>";
+
                 mysqli_close($con);
             ?>
         </section>
