@@ -17,8 +17,16 @@
         </div>
         <hr>
         <div class="login-nav-cont">
-            <a href="login.php" class='login-nav'>Log in</a>
-            <a href="sign-in.php" class='login-nav sign-in'>Sign in</a>
+        <?php
+                if(!isset($_COOKIE['user'])){
+                    echo "<a href='login.php' class='login-nav'>Log in</a>";
+                    echo "<a href='sign-in.php' class='login-nav sign-in'>Sign in</a>";
+                }else{
+                    echo $_COOKIE['user'];
+                    echo "<img src='img/profile-picture.png' alt='profile photo' width='25px' height='25px'>'";
+                    echo "<button class='login-nav sign-in sign-out'>Sign out</button>";
+                }
+            ?>
         </div>
     </nav>
     <aside>

@@ -1,8 +1,8 @@
-<!-- <?php
-    // function setLoginCookie($username){
-    //     setcookie("user", $username, time() + 3600, "/");
-    // }
-?> -->
+<?php
+    function setLoginCookie($username){
+        setcookie("user", $username, time() + 3600, "/");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,22 +30,31 @@
         <form action="" method="post">
             <h1>Log into Stack Overflow</h1>
             <label for="name-inp">Username:</label>
-            <input type="text" id="name-inp">
+            <input type="text" name="name-inp" id="name-inp">
             <br>
             <label for="password-inp">Password:</label>
-            <input type="text" id="password-inp">
+            <input type="text" name='password-inp' id="password-inp">
             <br>
             <br>
             <button>Log in</button>
             <p>Already have an account? <a href="sign-in.php">Sign in</a></p>
         </form>
-        <!-- <?php
-            // if($_SERVER["REQUEST_METHOD"] == "POST"){
-            //     $username = $_POST["name-inp"];
-            //     $password = $_POST["password-inp"];
-            //     setLoginCookie($username);
-            // }
-        ?> -->
+        <?php
+            $con = mysqli_connect("localhost", "root", "", "stackoverflow");
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                $username = $_POST["name-inp"];
+                $password = $_POST["password-inp"];
+                $sql = "SELECT username FROM users WHERE username LIKE '$username' AND user_password LIKE '$password';";
+                $result = mysqli_query($con, $sql);
+                if(mysqli_num_rows($result)){
+                    setLoginCookie($username);
+                    header('Location: http://localhost/StackOverflow-main/projekt/');
+                }
+            }
+        ?>
     </main>
+    <?php
+        mysqli_close($con);
+    ?>
 </body>
 </html>
