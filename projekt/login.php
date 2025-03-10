@@ -37,7 +37,7 @@
             <br>
             <br>
             <button>Log in</button>
-            <p>Already have an account? <a href="sign-in.php">Sign in</a></p>
+            <p>Dont have an account yet? <a href="sign-in.php">Sign in</a></p>
         </form>
         <?php
             $con = mysqli_connect("localhost", "root", "", "stackoverflow");

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 10 Mar 2025, 13:51
+-- Czas generowania: 10 Mar 2025, 15:08
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 7.4.26
 
@@ -46,7 +46,7 @@ CREATE TABLE `posts` (
   `title` varchar(50) NOT NULL,
   `description` varchar(200) DEFAULT NULL,
   `votes` int(11) DEFAULT 0,
-  `answers` int(11) DEFAULT NULL,
+  `answers` int(11) DEFAULT 0,
   `disabled` tinyint(1) DEFAULT 0,
   `user_id` int(11) NOT NULL,
   `views` int(11) DEFAULT 0

@@ -18,22 +18,59 @@
         <hr>
         <div class="login-nav-cont">
             <a href="login.php" class='login-nav'>Log in</a>
-            <a href="sign-in.php" class='login-nav sign-in'>Sign in</a>
+            <a href="sign-in.php" class='login-nav sign-in'>Log in</a>
         </div>
     </nav>
     <main>
-        <form action="">
+        <form action="" method="post">
             <h1>Sign into Stack Overflow</h1>
+            <label for="email-inp">Email:</label>
+            <input type="email" name="email-inp" id="email-inp">
+            <br>
             <label for="name-inp">Username:</label>
-            <input type="text" id="name-inp">
+            <input type="text" name="name-inp" id="name-inp">
             <br>
             <label for="password-inp">Password:</label>
-            <input type="text" id="password-inp">
+            <input type="password" name="password-inp" id="password-inp">
+            <br>
+            <label for="repass-inp">Repeat password:</label>
+            <input type="password" name="repass-inp" id="repass-inp">
             <br>
             <br>
-            <button>Log in</button>
-            <p>Dont have an account yet? <a href="login.php">Log in</a></p>
+            <button>Sign in</button>
+            <p class='login-par'>Already have an account? <a href="login.php" class="anch">Log in</a></p>
         </form>
+        <?php
+            $con = mysqli_connect("localhost", "root", "", "stackoverflow");
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                $email = $_POST["email-inp"];
+                $username = $_POST["name-inp"];
+                $password = $_POST["password-inp"];
+                $repassword = $_POST['repass-inp'];
+                $sql_username = "SELECT username FROM users WHERE username LIKE '$username';";
+                $sql_email = "SELECT username FROM users WHERE email LIKE '$email';";
+                $result_username = mysqli_query($con, $sql_username);
+                $result_email = mysqli_query($con, $sql_email);
+                if(mysqli_num_rows($result_username) || mysqli_num_rows($result_email)){
+                    echo "<script>
+                        const anch = document.querySelector('.anch');
+                        const loginPar = document.querySelector('.login-par');
+                        loginPar.innerHTML = 'Account already exists. ';
+                        loginPar.appendChild(anch);
+                    </script>";
+                }else if($password != $repassword){
+                    echo "<script>
+                        const anch = document.querySelector('.anch');
+                        const loginPar = document.querySelector('.login-par');
+                        loginPar.innerHTML = 'Account already exists. ';
+                        loginPar.appendChild(anch);
+                    </script>";
+                }
+            }
+        ?>
     </main>
+    <?php
+        mysqli_close($con);
+    ?>
 </body>
 </html>
