@@ -25,3 +25,5 @@ signOutBtn.addEventListener("click", () =>{
         location.reload();
     });
 });
+
+const adad = 2;
